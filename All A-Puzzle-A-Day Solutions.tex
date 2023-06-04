@@ -1,0 +1,556 @@
+\documentclass[a4paper, 10pt]{article}
+
+% Layout
+\usepackage[a4paper, left=15mm, right=15mm, top=20mm, bottom=20mm]{geometry}
+
+% Language & encoding
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Typeface & styles
+\usepackage[protrusion=true,expansion=true,final]{microtype}
+\usepackage{paratype}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{parskip}
+\pagestyle{empty}
+
+% Imatges
+\usepackage{graphicx}
+\graphicspath{{./pic/}}
+
+% Links
+\usepackage{hyperref}
+\hypersetup { hidelinks,
+    pdfauthor    = {Carlos Luna-Mota},
+    pdfsubject   = {All A-Puzzle-A-Day Solutions},
+    pdftitle     = {All A-Puzzle-A-Day Solutions},
+    pdfkeywords  = {A-Puzzle-A-Day, Solutions},
+    pdfcreator   = {LaTeX},
+    pdfproducer  = {pdflatex}
+}
+\urlstyle{same}
+
+\newcommand{\MONTH}[2]{\section*{\hyperref[index]{\Huge #2}}\label{#1}\bigskip}
+\newcommand{\DAY}[2]{\subsection*{\hyperref[index]{\LARGE #1 #2}}\label{#1#2}\smallskip \includegraphics[width=\textwidth]{#1#2.pdf}\bigskip}
+\newcommand{\M}[2]{\hyperref[#1]{\textbf{\LARGE #2}}}
+\newcommand{\D}[2]{\hyperref[#1#2]{#2}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+    \begin{center}
+        
+        \section*{\Huge All A-Puzzle-A-Day Solutions}
+        \bigskip
+        
+        {\large \begin{tabular}{rl}
+         \textbf{A-Puzzle-A-Day:} & \href{https://en.wikipedia.org/wiki/All_rights_reserved}{©} %
+            \href{https://www.dragonfjord.com/about-us/}{Gerd Åsta Bones \& Mike Naylor} (\href{https://www.dragonfjord.com/}{DragonFjord}) \\[1ex]
+        \textbf{This document:} & \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{%
+            \includegraphics[scale=0.16]{cc.pdf}%
+            \includegraphics[scale=0.16]{by.pdf}%
+            \includegraphics[scale=0.16]{nc.pdf}%
+            \includegraphics[scale=0.16]{sa.pdf}} %
+            \href{https://github.com/CarlosLunaMota}{Carlos Luna-Mot}a (\href{https://mmaca.cat/}{MMACA})
+        \end{tabular}}
+
+        \vfill
+
+        \label{index}
+        \begin{tabular}{ccc}
+            \M{Jan}{January} & \hspace{4ex} & \M{Feb}{February} \\[1ex]
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Jan}{01} & \D{Jan}{02} & \D{Jan}{03} & \D{Jan}{04} & \D{Jan}{05} & \D{Jan}{06} & \D{Jan}{07} \\\hline
+                \D{Jan}{08} & \D{Jan}{09} & \D{Jan}{10} & \D{Jan}{11} & \D{Jan}{12} & \D{Jan}{13} & \D{Jan}{14} \\\hline
+                \D{Jan}{15} & \D{Jan}{16} & \D{Jan}{17} & \D{Jan}{18} & \D{Jan}{19} & \D{Jan}{20} & \D{Jan}{21} \\\hline
+                \D{Jan}{22} & \D{Jan}{23} & \D{Jan}{24} & \D{Jan}{25} & \D{Jan}{26} & \D{Jan}{27} & \D{Jan}{28} \\\hline
+                \D{Jan}{29} & \D{Jan}{30} & \D{Jan}{31} &             &             &             &             \\\hline
+            \end{tabular} & &
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Feb}{01} & \D{Feb}{02} & \D{Feb}{03} & \D{Feb}{04} & \D{Feb}{05} & \D{Feb}{06} & \D{Feb}{07} \\\hline
+                \D{Feb}{08} & \D{Feb}{09} & \D{Feb}{10} & \D{Feb}{11} & \D{Feb}{12} & \D{Feb}{13} & \D{Feb}{14} \\\hline
+                \D{Feb}{15} & \D{Feb}{16} & \D{Feb}{17} & \D{Feb}{18} & \D{Feb}{19} & \D{Feb}{20} & \D{Feb}{21} \\\hline
+                \D{Feb}{22} & \D{Feb}{23} & \D{Feb}{24} & \D{Feb}{25} & \D{Feb}{26} & \D{Feb}{27} & \D{Feb}{28} \\\hline
+                \D{Feb}{29} & \D{Feb}{30} & \D{Feb}{31} &             &             &             &             \\\hline
+            \end{tabular} \\
+            & & \\[2ex]
+            \M{Mar}{March}     & & \M{Apr}{April} \\[1ex]
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Mar}{01} & \D{Mar}{02} & \D{Mar}{03} & \D{Mar}{04} & \D{Mar}{05} & \D{Mar}{06} & \D{Mar}{07} \\\hline
+                \D{Mar}{08} & \D{Mar}{09} & \D{Mar}{10} & \D{Mar}{11} & \D{Mar}{12} & \D{Mar}{13} & \D{Mar}{14} \\\hline
+                \D{Mar}{15} & \D{Mar}{16} & \D{Mar}{17} & \D{Mar}{18} & \D{Mar}{19} & \D{Mar}{20} & \D{Mar}{21} \\\hline
+                \D{Mar}{22} & \D{Mar}{23} & \D{Mar}{24} & \D{Mar}{25} & \D{Mar}{26} & \D{Mar}{27} & \D{Mar}{28} \\\hline
+                \D{Mar}{29} & \D{Mar}{30} & \D{Mar}{31} &             &             &             &             \\\hline
+            \end{tabular} & &
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Apr}{01} & \D{Apr}{02} & \D{Apr}{03} & \D{Apr}{04} & \D{Apr}{05} & \D{Apr}{06} & \D{Apr}{07} \\\hline
+                \D{Apr}{08} & \D{Apr}{09} & \D{Apr}{10} & \D{Apr}{11} & \D{Apr}{12} & \D{Apr}{13} & \D{Apr}{14} \\\hline
+                \D{Apr}{15} & \D{Apr}{16} & \D{Apr}{17} & \D{Apr}{18} & \D{Apr}{19} & \D{Apr}{20} & \D{Apr}{21} \\\hline
+                \D{Apr}{22} & \D{Apr}{23} & \D{Apr}{24} & \D{Apr}{25} & \D{Apr}{26} & \D{Apr}{27} & \D{Apr}{28} \\\hline
+                \D{Apr}{29} & \D{Apr}{30} & \D{Apr}{31} &             &             &             &             \\\hline
+            \end{tabular} \\
+            & & \\[2ex]
+            \M{May}{May}       & & \M{Jun}{June} \\[1ex]
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{May}{01} & \D{May}{02} & \D{May}{03} & \D{May}{04} & \D{May}{05} & \D{May}{06} & \D{May}{07} \\\hline
+                \D{May}{08} & \D{May}{09} & \D{May}{10} & \D{May}{11} & \D{May}{12} & \D{May}{13} & \D{May}{14} \\\hline
+                \D{May}{15} & \D{May}{16} & \D{May}{17} & \D{May}{18} & \D{May}{19} & \D{May}{20} & \D{May}{21} \\\hline
+                \D{May}{22} & \D{May}{23} & \D{May}{24} & \D{May}{25} & \D{May}{26} & \D{May}{27} & \D{May}{28} \\\hline
+                \D{May}{29} & \D{May}{30} & \D{May}{31} &             &             &             &             \\\hline
+            \end{tabular} & &
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Jun}{01} & \D{Jun}{02} & \D{Jun}{03} & \D{Jun}{04} & \D{Jun}{05} & \D{Jun}{06} & \D{Jun}{07} \\\hline
+                \D{Jun}{08} & \D{Jun}{09} & \D{Jun}{10} & \D{Jun}{11} & \D{Jun}{12} & \D{Jun}{13} & \D{Jun}{14} \\\hline
+                \D{Jun}{15} & \D{Jun}{16} & \D{Jun}{17} & \D{Jun}{18} & \D{Jun}{19} & \D{Jun}{20} & \D{Jun}{21} \\\hline
+                \D{Jun}{22} & \D{Jun}{23} & \D{Jun}{24} & \D{Jun}{25} & \D{Jun}{26} & \D{Jun}{27} & \D{Jun}{28} \\\hline
+                \D{Jun}{29} & \D{Jun}{30} & \D{Jun}{31} &             &             &             &             \\\hline
+            \end{tabular} \\
+            & & \\[2ex]
+            \M{Jul}{July}      & & \M{Aug}{August} \\[1ex]
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Jul}{01} & \D{Jul}{02} & \D{Jul}{03} & \D{Jul}{04} & \D{Jul}{05} & \D{Jul}{06} & \D{Jul}{07} \\\hline
+                \D{Jul}{08} & \D{Jul}{09} & \D{Jul}{10} & \D{Jul}{11} & \D{Jul}{12} & \D{Jul}{13} & \D{Jul}{14} \\\hline
+                \D{Jul}{15} & \D{Jul}{16} & \D{Jul}{17} & \D{Jul}{18} & \D{Jul}{19} & \D{Jul}{20} & \D{Jul}{21} \\\hline
+                \D{Jul}{22} & \D{Jul}{23} & \D{Jul}{24} & \D{Jul}{25} & \D{Jul}{26} & \D{Jul}{27} & \D{Jul}{28} \\\hline
+                \D{Jul}{29} & \D{Jul}{30} & \D{Jul}{31} &             &             &             &             \\\hline
+            \end{tabular} & &
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Aug}{01} & \D{Aug}{02} & \D{Aug}{03} & \D{Aug}{04} & \D{Aug}{05} & \D{Aug}{06} & \D{Aug}{07} \\\hline
+                \D{Aug}{08} & \D{Aug}{09} & \D{Aug}{10} & \D{Aug}{11} & \D{Aug}{12} & \D{Aug}{13} & \D{Aug}{14} \\\hline
+                \D{Aug}{15} & \D{Aug}{16} & \D{Aug}{17} & \D{Aug}{18} & \D{Aug}{19} & \D{Aug}{20} & \D{Aug}{21} \\\hline
+                \D{Aug}{22} & \D{Aug}{23} & \D{Aug}{24} & \D{Aug}{25} & \D{Aug}{26} & \D{Aug}{27} & \D{Aug}{28} \\\hline
+                \D{Aug}{29} & \D{Aug}{30} & \D{Aug}{31} &             &             &             &             \\\hline
+            \end{tabular} \\
+            & & \\[2ex]
+            \M{Sep}{September} & & \M{Oct}{October} \\[1ex]
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Sep}{01} & \D{Sep}{02} & \D{Sep}{03} & \D{Sep}{04} & \D{Sep}{05} & \D{Sep}{06} & \D{Sep}{07} \\\hline
+                \D{Sep}{08} & \D{Sep}{09} & \D{Sep}{10} & \D{Sep}{11} & \D{Sep}{12} & \D{Sep}{13} & \D{Sep}{14} \\\hline
+                \D{Sep}{15} & \D{Sep}{16} & \D{Sep}{17} & \D{Sep}{18} & \D{Sep}{19} & \D{Sep}{20} & \D{Sep}{21} \\\hline
+                \D{Sep}{22} & \D{Sep}{23} & \D{Sep}{24} & \D{Sep}{25} & \D{Sep}{26} & \D{Sep}{27} & \D{Sep}{28} \\\hline
+                \D{Sep}{29} & \D{Sep}{30} & \D{Sep}{31} &             &             &             &             \\\hline
+            \end{tabular} & &
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Oct}{01} & \D{Oct}{02} & \D{Oct}{03} & \D{Oct}{04} & \D{Oct}{05} & \D{Oct}{06} & \D{Oct}{07} \\\hline
+                \D{Oct}{08} & \D{Oct}{09} & \D{Oct}{10} & \D{Oct}{11} & \D{Oct}{12} & \D{Oct}{13} & \D{Oct}{14} \\\hline
+                \D{Oct}{15} & \D{Oct}{16} & \D{Oct}{17} & \D{Oct}{18} & \D{Oct}{19} & \D{Oct}{20} & \D{Oct}{21} \\\hline
+                \D{Oct}{22} & \D{Oct}{23} & \D{Oct}{24} & \D{Oct}{25} & \D{Oct}{26} & \D{Oct}{27} & \D{Oct}{28} \\\hline
+                \D{Oct}{29} & \D{Oct}{30} & \D{Oct}{31} &             &             &             &             \\\hline
+            \end{tabular} \\
+            & & \\[2ex]
+            \M{Nov}{November}  & & \M{Dec}{December} \\[1ex]
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Nov}{01} & \D{Nov}{02} & \D{Nov}{03} & \D{Nov}{04} & \D{Nov}{05} & \D{Nov}{06} & \D{Nov}{07} \\\hline
+                \D{Nov}{08} & \D{Nov}{09} & \D{Nov}{10} & \D{Nov}{11} & \D{Nov}{12} & \D{Nov}{13} & \D{Nov}{14} \\\hline
+                \D{Nov}{15} & \D{Nov}{16} & \D{Nov}{17} & \D{Nov}{18} & \D{Nov}{19} & \D{Nov}{20} & \D{Nov}{21} \\\hline
+                \D{Nov}{22} & \D{Nov}{23} & \D{Nov}{24} & \D{Nov}{25} & \D{Nov}{26} & \D{Nov}{27} & \D{Nov}{28} \\\hline
+                \D{Nov}{29} & \D{Nov}{30} & \D{Nov}{31} &             &             &             &             \\\hline
+            \end{tabular} & &
+            \begin{tabular}{|c|c|c|c|c|c|c|}\hline
+                \D{Dec}{01} & \D{Dec}{02} & \D{Dec}{03} & \D{Dec}{04} & \D{Dec}{05} & \D{Dec}{06} & \D{Dec}{07} \\\hline
+                \D{Dec}{08} & \D{Dec}{09} & \D{Dec}{10} & \D{Dec}{11} & \D{Dec}{12} & \D{Dec}{13} & \D{Dec}{14} \\\hline
+                \D{Dec}{15} & \D{Dec}{16} & \D{Dec}{17} & \D{Dec}{18} & \D{Dec}{19} & \D{Dec}{20} & \D{Dec}{21} \\\hline
+                \D{Dec}{22} & \D{Dec}{23} & \D{Dec}{24} & \D{Dec}{25} & \D{Dec}{26} & \D{Dec}{27} & \D{Dec}{28} \\\hline
+                \D{Dec}{29} & \D{Dec}{30} & \D{Dec}{31} &             &             &             &             \\\hline
+            \end{tabular} \\
+        \end{tabular}
+
+        \newpage
+        \MONTH{Jan}{January}
+        \DAY{Jan}{01}
+        \DAY{Jan}{02}
+        \DAY{Jan}{03}
+        \DAY{Jan}{04}
+        \DAY{Jan}{05}
+        \DAY{Jan}{06}
+        \DAY{Jan}{07}
+        \DAY{Jan}{08}
+        \DAY{Jan}{09}
+        \DAY{Jan}{10}
+        \DAY{Jan}{11}
+        \DAY{Jan}{12}
+        \DAY{Jan}{13}
+        \DAY{Jan}{14}
+        \DAY{Jan}{15}
+        \DAY{Jan}{16}
+        \DAY{Jan}{17}
+        \DAY{Jan}{18}
+        \DAY{Jan}{19}
+        \DAY{Jan}{20}
+        \DAY{Jan}{21}
+        \DAY{Jan}{22}
+        \DAY{Jan}{23}
+        \DAY{Jan}{24}
+        \DAY{Jan}{25}
+        \DAY{Jan}{26}
+        \DAY{Jan}{27}
+        \DAY{Jan}{28}
+        \DAY{Jan}{29}
+        \DAY{Jan}{30}
+        \DAY{Jan}{31}
+        \newpage
+        \MONTH{Feb}{February}
+        \DAY{Feb}{01}
+        \DAY{Feb}{02}
+        \DAY{Feb}{03}
+        \DAY{Feb}{04}
+        \DAY{Feb}{05}
+        \DAY{Feb}{06}
+        \DAY{Feb}{07}
+        \DAY{Feb}{08}
+        \DAY{Feb}{09}
+        \DAY{Feb}{10}
+        \DAY{Feb}{11}
+        \DAY{Feb}{12}
+        \DAY{Feb}{13}
+        \DAY{Feb}{14}
+        \DAY{Feb}{15}
+        \DAY{Feb}{16}
+        \DAY{Feb}{17}
+        \DAY{Feb}{18}
+        \DAY{Feb}{19}
+        \DAY{Feb}{20}
+        \DAY{Feb}{21}
+        \DAY{Feb}{22}
+        \DAY{Feb}{23}
+        \DAY{Feb}{24}
+        \DAY{Feb}{25}
+        \DAY{Feb}{26}
+        \DAY{Feb}{27}
+        \DAY{Feb}{28}
+        \DAY{Feb}{29}
+        \DAY{Feb}{30}
+        \DAY{Feb}{31}        
+        \newpage
+        \MONTH{Mar}{March}
+        \DAY{Mar}{01}
+        \DAY{Mar}{02}
+        \DAY{Mar}{03}
+        \DAY{Mar}{04}
+        \DAY{Mar}{05}
+        \DAY{Mar}{06}
+        \DAY{Mar}{07}
+        \DAY{Mar}{08}
+        \DAY{Mar}{09}
+        \DAY{Mar}{10}
+        \DAY{Mar}{11}
+        \DAY{Mar}{12}
+        \DAY{Mar}{13}
+        \DAY{Mar}{14}
+        \DAY{Mar}{15}
+        \DAY{Mar}{16}
+        \DAY{Mar}{17}
+        \DAY{Mar}{18}
+        \DAY{Mar}{19}
+        \DAY{Mar}{20}
+        \DAY{Mar}{21}
+        \DAY{Mar}{22}
+        \DAY{Mar}{23}
+        \DAY{Mar}{24}
+        \DAY{Mar}{25}
+        \DAY{Mar}{26}
+        \DAY{Mar}{27}
+        \DAY{Mar}{28}
+        \DAY{Mar}{29}
+        \DAY{Mar}{30}
+        \DAY{Mar}{31}        
+        \newpage
+        \MONTH{Apr}{April}
+        \DAY{Apr}{01}
+        \DAY{Apr}{02}
+        \DAY{Apr}{03}
+        \DAY{Apr}{04}
+        \DAY{Apr}{05}
+        \DAY{Apr}{06}
+        \DAY{Apr}{07}
+        \DAY{Apr}{08}
+        \DAY{Apr}{09}
+        \DAY{Apr}{10}
+        \DAY{Apr}{11}
+        \DAY{Apr}{12}
+        \DAY{Apr}{13}
+        \DAY{Apr}{14}
+        \DAY{Apr}{15}
+        \DAY{Apr}{16}
+        \DAY{Apr}{17}
+        \DAY{Apr}{18}
+        \DAY{Apr}{19}
+        \DAY{Apr}{20}
+        \DAY{Apr}{21}
+        \DAY{Apr}{22}
+        \DAY{Apr}{23}
+        \DAY{Apr}{24}
+        \DAY{Apr}{25}
+        \DAY{Apr}{26}
+        \DAY{Apr}{27}
+        \DAY{Apr}{28}
+        \DAY{Apr}{29}
+        \DAY{Apr}{30}
+        \DAY{Apr}{31}        
+        \newpage
+        \MONTH{May}{May}
+        \DAY{May}{01}
+        \DAY{May}{02}
+        \DAY{May}{03}
+        \DAY{May}{04}
+        \DAY{May}{05}
+        \DAY{May}{06}
+        \DAY{May}{07}
+        \DAY{May}{08}
+        \DAY{May}{09}
+        \DAY{May}{10}
+        \DAY{May}{11}
+        \DAY{May}{12}
+        \DAY{May}{13}
+        \DAY{May}{14}
+        \DAY{May}{15}
+        \DAY{May}{16}
+        \DAY{May}{17}
+        \DAY{May}{18}
+        \DAY{May}{19}
+        \DAY{May}{20}
+        \DAY{May}{21}
+        \DAY{May}{22}
+        \DAY{May}{23}
+        \DAY{May}{24}
+        \DAY{May}{25}
+        \DAY{May}{26}
+        \DAY{May}{27}
+        \DAY{May}{28}
+        \DAY{May}{29}
+        \DAY{May}{30}
+        \DAY{May}{31}        
+        \newpage
+        \MONTH{Jun}{June}
+        \DAY{Jun}{01}
+        \DAY{Jun}{02}
+        \DAY{Jun}{03}
+        \DAY{Jun}{04}
+        \DAY{Jun}{05}
+        \DAY{Jun}{06}
+        \DAY{Jun}{07}
+        \DAY{Jun}{08}
+        \DAY{Jun}{09}
+        \DAY{Jun}{10}
+        \DAY{Jun}{11}
+        \DAY{Jun}{12}
+        \DAY{Jun}{13}
+        \DAY{Jun}{14}
+        \DAY{Jun}{15}
+        \DAY{Jun}{16}
+        \DAY{Jun}{17}
+        \DAY{Jun}{18}
+        \DAY{Jun}{19}
+        \DAY{Jun}{20}
+        \DAY{Jun}{21}
+        \DAY{Jun}{22}
+        \DAY{Jun}{23}
+        \DAY{Jun}{24}
+        \DAY{Jun}{25}
+        \DAY{Jun}{26}
+        \DAY{Jun}{27}
+        \DAY{Jun}{28}
+        \DAY{Jun}{29}
+        \DAY{Jun}{30}
+        \DAY{Jun}{31}        
+        \newpage
+        \MONTH{Jul}{July}
+        \DAY{Jul}{01}
+        \DAY{Jul}{02}
+        \DAY{Jul}{03}
+        \DAY{Jul}{04}
+        \DAY{Jul}{05}
+        \DAY{Jul}{06}
+        \DAY{Jul}{07}
+        \DAY{Jul}{08}
+        \DAY{Jul}{09}
+        \DAY{Jul}{10}
+        \DAY{Jul}{11}
+        \DAY{Jul}{12}
+        \DAY{Jul}{13}
+        \DAY{Jul}{14}
+        \DAY{Jul}{15}
+        \DAY{Jul}{16}
+        \DAY{Jul}{17}
+        \DAY{Jul}{18}
+        \DAY{Jul}{19}
+        \DAY{Jul}{20}
+        \DAY{Jul}{21}
+        \DAY{Jul}{22}
+        \DAY{Jul}{23}
+        \DAY{Jul}{24}
+        \DAY{Jul}{25}
+        \DAY{Jul}{26}
+        \DAY{Jul}{27}
+        \DAY{Jul}{28}
+        \DAY{Jul}{29}
+        \DAY{Jul}{30}
+        \DAY{Jul}{31}        
+        \newpage
+        \MONTH{Aug}{August}
+        \DAY{Aug}{01}
+        \DAY{Aug}{02}
+        \DAY{Aug}{03}
+        \DAY{Aug}{04}
+        \DAY{Aug}{05}
+        \DAY{Aug}{06}
+        \DAY{Aug}{07}
+        \DAY{Aug}{08}
+        \DAY{Aug}{09}
+        \DAY{Aug}{10}
+        \DAY{Aug}{11}
+        \DAY{Aug}{12}
+        \DAY{Aug}{13}
+        \DAY{Aug}{14}
+        \DAY{Aug}{15}
+        \DAY{Aug}{16}
+        \DAY{Aug}{17}
+        \DAY{Aug}{18}
+        \DAY{Aug}{19}
+        \DAY{Aug}{20}
+        \DAY{Aug}{21}
+        \DAY{Aug}{22}
+        \DAY{Aug}{23}
+        \DAY{Aug}{24}
+        \DAY{Aug}{25}
+        \DAY{Aug}{26}
+        \DAY{Aug}{27}
+        \DAY{Aug}{28}
+        \DAY{Aug}{29}
+        \DAY{Aug}{30}
+        \DAY{Aug}{31}        
+        \newpage
+        \MONTH{Sep}{September}
+        \DAY{Sep}{01}
+        \DAY{Sep}{02}
+        \DAY{Sep}{03}
+        \DAY{Sep}{04}
+        \DAY{Sep}{05}
+        \DAY{Sep}{06}
+        \DAY{Sep}{07}
+        \DAY{Sep}{08}
+        \DAY{Sep}{09}
+        \DAY{Sep}{10}
+        \DAY{Sep}{11}
+        \DAY{Sep}{12}
+        \DAY{Sep}{13}
+        \DAY{Sep}{14}
+        \DAY{Sep}{15}
+        \DAY{Sep}{16}
+        \DAY{Sep}{17}
+        \DAY{Sep}{18}
+        \DAY{Sep}{19}
+        \DAY{Sep}{20}
+        \DAY{Sep}{21}
+        \DAY{Sep}{22}
+        \DAY{Sep}{23}
+        \DAY{Sep}{24}
+        \DAY{Sep}{25}
+        \DAY{Sep}{26}
+        \DAY{Sep}{27}
+        \DAY{Sep}{28}
+        \DAY{Sep}{29}
+        \DAY{Sep}{30}
+        \DAY{Sep}{31}        
+        \newpage
+        \MONTH{Oct}{October}
+        \DAY{Oct}{01}
+        \DAY{Oct}{02}
+        \DAY{Oct}{03}
+        \DAY{Oct}{04}
+        \DAY{Oct}{05}
+        \DAY{Oct}{06}
+        \DAY{Oct}{07}
+        \DAY{Oct}{08}
+        \DAY{Oct}{09}
+        \DAY{Oct}{10}
+        \DAY{Oct}{11}
+        \DAY{Oct}{12}
+        \DAY{Oct}{13}
+        \DAY{Oct}{14}
+        \DAY{Oct}{15}
+        \DAY{Oct}{16}
+        \DAY{Oct}{17}
+        \DAY{Oct}{18}
+        \DAY{Oct}{19}
+        \DAY{Oct}{20}
+        \DAY{Oct}{21}
+        \DAY{Oct}{22}
+        \DAY{Oct}{23}
+        \DAY{Oct}{24}
+        \DAY{Oct}{25}
+        \DAY{Oct}{26}
+        \DAY{Oct}{27}
+        \DAY{Oct}{28}
+        \DAY{Oct}{29}
+        \DAY{Oct}{30}
+        \DAY{Oct}{31}        
+        \newpage
+        \MONTH{Nov}{November}
+        \DAY{Nov}{01}
+        \DAY{Nov}{02}
+        \DAY{Nov}{03}
+        \DAY{Nov}{04}
+        \DAY{Nov}{05}
+        \DAY{Nov}{06}
+        \DAY{Nov}{07}
+        \DAY{Nov}{08}
+        \DAY{Nov}{09}
+        \DAY{Nov}{10}
+        \DAY{Nov}{11}
+        \DAY{Nov}{12}
+        \DAY{Nov}{13}
+        \DAY{Nov}{14}
+        \DAY{Nov}{15}
+        \DAY{Nov}{16}
+        \DAY{Nov}{17}
+        \DAY{Nov}{18}
+        \DAY{Nov}{19}
+        \DAY{Nov}{20}
+        \DAY{Nov}{21}
+        \DAY{Nov}{22}
+        \DAY{Nov}{23}
+        \DAY{Nov}{24}
+        \DAY{Nov}{25}
+        \DAY{Nov}{26}
+        \DAY{Nov}{27}
+        \DAY{Nov}{28}
+        \DAY{Nov}{29}
+        \DAY{Nov}{30}
+        \DAY{Nov}{31}        
+        \newpage
+        \MONTH{Dec}{December}
+        \DAY{Dec}{01}
+        \DAY{Dec}{02}
+        \DAY{Dec}{03}
+        \DAY{Dec}{04}
+        \DAY{Dec}{05}
+        \DAY{Dec}{06}
+        \DAY{Dec}{07}
+        \DAY{Dec}{08}
+        \DAY{Dec}{09}
+        \DAY{Dec}{10}
+        \DAY{Dec}{11}
+        \DAY{Dec}{12}
+        \DAY{Dec}{13}
+        \DAY{Dec}{14}
+        \DAY{Dec}{15}
+        \DAY{Dec}{16}
+        \DAY{Dec}{17}
+        \DAY{Dec}{18}
+        \DAY{Dec}{19}
+        \DAY{Dec}{20}
+        \DAY{Dec}{21}
+        \DAY{Dec}{22}
+        \DAY{Dec}{23}
+        \DAY{Dec}{24}
+        \DAY{Dec}{25}
+        \DAY{Dec}{26}
+        \DAY{Dec}{27}
+        \DAY{Dec}{28}
+        \DAY{Dec}{29}
+        \DAY{Dec}{30}
+        \DAY{Dec}{31}
+    \end{center}
+\end{document}
