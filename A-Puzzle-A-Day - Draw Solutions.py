@@ -41,7 +41,7 @@ def contour(pixels):
 
     return polygon[1:]
     
-def draw_low(name, solutions):
+def draw_solutions(name, solutions):
 
     X = 0.1     # Scale
     Y = 1.0     # Width
@@ -111,8 +111,7 @@ def draw_low(name, solutions):
     mycanvas = canvas.canvas()
     for (p, s) in drawing: mycanvas.stroke(p, s)
 
-    mycanvas.writePDFfile("./pic/"+name)
-
+    mycanvas.writePDFfile("./solutions/"+name)
 
 ### MAIN FUNCTION ##############################################################
 
@@ -125,6 +124,6 @@ if __name__ == "__main__":
             puzzles[solution[:5]].append(eval(solution[12:]))
 
     for name in puzzles:
-        draw_low(name, puzzles[name])
+        draw_solutions(name, puzzles[name])
  
 ################################################################################

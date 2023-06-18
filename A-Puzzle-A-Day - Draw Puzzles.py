@@ -15,21 +15,9 @@ TEXT = {(0,6):"Jan",(1,6):"Feb",(2,6):"Mar",(3,6):"Apr",(4,6):"May",(5,6):"Jun",
         (0,1):"22",(1,1):"23",(2,1):"24",(3,1):"25",(4,1):"26",(5,1):"27",(6,1):"28",
         (0,0):"29",(1,0):"30",(2,0):"31"}
 
-# https://lospec.com/palette-list/dreamscape8
-COLOR = (color.rgbfromhexstring("#d38540"), # Month Background
-         color.rgbfromhexstring("#d38540"), # Day Background
-         color.rgbfromhexstring("#c9cca1"), # O Background
-         color.rgbfromhexstring("#caa05a"), # U Background
-         color.rgbfromhexstring("#8b4049"), # V Background
-         color.rgbfromhexstring("#543344"), # S Background
-         color.rgbfromhexstring("#ae6a47"), # P Background
-         color.rgbfromhexstring("#63787d"), # Y Background
-         color.rgbfromhexstring("#8ea091"), # Z Background
-         color.rgbfromhexstring("#515262"), # L Background
-         color.rgbfromhexstring("#BF712B"), # Board Border Background
-         color.rgbfromhexstring("#000000"), # Grid Lines
-         color.rgbfromhexstring("#000000"), # Text          
-         color.rgbfromhexstring("#FFFFFF")) # White
+BLACK = color.rgbfromhexstring("#000000")
+WHITE = color.rgbfromhexstring("#FFFFFF")
+GREY  = color.rgbfromhexstring("#CCCCCC")
 
 ### AUXILIARY FUNCTIONS AND DATA STRUCTURES ####################################
 
@@ -71,14 +59,14 @@ def contour(pixels):
 
     return polygon[1:]
     
-def draw(name, pieces):
+def draw_puzzle(name, pieces):
     
     drawing = []
 
     # STYLES:
     BASE  = [style.linecap.round, style.linejoin.round, style.linestyle.solid]
-    BASE += [style.linewidth.THick, COLOR[11]]
-    BOARD = BASE + [style.linewidth.THIck, deco.filled([COLOR[10]])]
+    BASE += [style.linewidth.THick, BLACK]
+    BOARD = BASE + [style.linewidth.THIck, deco.filled([GREY])]
     
     # BORDER:
     drawing.append((path.path(path.moveto(-0.5, -0.5),
@@ -95,7 +83,7 @@ def draw(name, pieces):
                                   path.lineto(x+1, y+1),
                                   path.lineto(x,   y+1),
                                   path.closepath()),
-                                  BASE + [deco.filled([COLOR[13]])]))
+                                  BASE + [deco.filled([WHITE])]))
                                       
     # PIECES:
     for n,piece in enumerate(pieces):
@@ -108,7 +96,7 @@ def draw(name, pieces):
                                       path.lineto(*polygon[2]),
                                       path.lineto(*polygon[3]),
                                       path.closepath()),
-                                      BASE + [deco.filled([COLOR[0]])]))
+                                      BASE + [deco.filled([GREY])]))
 
         
         elif len(polygon) == 6:
@@ -119,7 +107,7 @@ def draw(name, pieces):
                                       path.lineto(*polygon[4]),
                                       path.lineto(*polygon[5]),
                                       path.closepath()),
-                                      BASE + [deco.filled([COLOR[0]])]))
+                                      BASE + [deco.filled([GREY])]))
         
         elif len(polygon) == 8:
             drawing.append((path.path(path.moveto(*polygon[0]),
@@ -131,7 +119,7 @@ def draw(name, pieces):
                                       path.lineto(*polygon[6]),
                                       path.lineto(*polygon[7]),
                                       path.closepath()),
-                                      BASE + [deco.filled([COLOR[0]])]))
+                                      BASE + [deco.filled([GREY])]))
         
         else: print("WRONG POLYGON:", polygon)
 
@@ -148,10 +136,72 @@ def draw(name, pieces):
 
     mycanvas.writePDFfile("./puzzles/"+name)
 
+def draw_pieces():
+    
+    drawing = []
+
+    # STYLES:
+    BASE  = [style.linecap.round, style.linejoin.round, style.linestyle.solid]
+    BASE += [style.linewidth.THick, BLACK]
+
+    # L:
+    drawing.append((path.path(path.moveto(0,0), path.lineto(2,0),
+                              path.lineto(2,1), path.lineto(1,1),
+                              path.lineto(1,4), path.lineto(0,4),
+                              path.closepath()), BASE))        
+
+    # N:
+    drawing.append((path.path(path.moveto(2.5,0.5), path.lineto(3.5,0.5),
+                              path.lineto(3.5,2.5), path.lineto(2.5,2.5),
+                              path.lineto(2.5,4.5), path.lineto(1.5,4.5),
+                              path.lineto(1.5,1.5), path.lineto(2.5,1.5),
+                              path.closepath()), BASE))        
+
+    # P:
+    drawing.append((path.path(path.moveto(0,4.5), path.lineto(1,4.5),
+                              path.lineto(1,5.5), path.lineto(2,5.5),
+                              path.lineto(2,7.5), path.lineto(0,7.5),
+                              path.closepath()), BASE))
+
+    # U:
+    drawing.append((path.path(path.moveto(2.5,5.5), path.lineto(3.5,5.5),
+                              path.lineto(3.5,6.5), path.lineto(4.5,6.5),
+                              path.lineto(4.5,5.5), path.lineto(5.5,5.5),
+                              path.lineto(5.5,7.5), path.lineto(2.5,7.5),
+                              path.closepath()), BASE))   
+
+    # V:
+    drawing.append((path.path(path.moveto(5,0), path.lineto(8,0),
+                              path.lineto(8,3), path.lineto(7,3),
+                              path.lineto(7,1), path.lineto(5,1),
+                              path.closepath()), BASE))
+
+    # Y:
+    drawing.append((path.path(path.moveto(7,3.5), path.lineto(7,5.5),
+                              path.lineto(6,5.5), path.lineto(6,6.5),
+                              path.lineto(7,6.5), path.lineto(7,7.5),
+                              path.lineto(8,7.5), path.lineto(8,3.5),
+                              path.closepath()), BASE))  
+
+    # Z:
+    drawing.append((path.path(path.moveto(3,4), path.lineto(3,5),
+                              path.lineto(5,5), path.lineto(5,3),
+                              path.lineto(6,3), path.lineto(6,2),
+                              path.lineto(4,2), path.lineto(4,4),
+                              path.closepath()), BASE))
+
+    # DRAW:
+    mycanvas = canvas.canvas()
+    for (p, s) in drawing: mycanvas.stroke(p, s)
+
+    mycanvas.writePDFfile("./pic/pieces")
+
 ### MAIN FUNCTION ##############################################################
 
 if __name__ == "__main__":
 
+    draw_pieces()
+    
     puzzles = defaultdict(lambda: defaultdict(list))
     
     with open("solutions.txt", 'r') as solutions:
@@ -167,9 +217,13 @@ if __name__ == "__main__":
 
         if SINGLE:
             for i,P in enumerate(SINGLE):
-                draw(name+"-UniqueSolution-{:02d}".format(i+1), P[0])
+                draw_puzzle(name+"-{:02d}".format(i+1), P[0])
+                print(r"        \SPUZZLE{"+name[:3]+"}{"+name[3:]+"}{"+
+                      "{:02d}".format(i+1)+"}")
         else:
             for i,P in enumerate(DOUBLE):
-                draw(name+"-DoubleSolution-{:02d}".format(i+1), P[0])
-            
+                draw_puzzle(name+"-{:02d}".format(i+1), P[0])
+                print(r"        \DPUZZLE{"+name[:3]+"}{"+name[3:]+"}{"+
+                      "{:02d}".format(i+1)+"}")
+
 ################################################################################
