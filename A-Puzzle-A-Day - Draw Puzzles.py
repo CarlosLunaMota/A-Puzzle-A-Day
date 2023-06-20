@@ -17,7 +17,7 @@ TEXT = {(0,6):"Jan",(1,6):"Feb",(2,6):"Mar",(3,6):"Apr",(4,6):"May",(5,6):"Jun",
 
 BLACK = color.rgbfromhexstring("#000000")
 WHITE = color.rgbfromhexstring("#FFFFFF")
-GREY  = color.rgbfromhexstring("#CCCCCC")
+GREY  = color.rgbfromhexstring("#AAAAAA")
 
 ### AUXILIARY FUNCTIONS AND DATA STRUCTURES ####################################
 
@@ -142,7 +142,8 @@ def draw_pieces():
 
     # STYLES:
     BASE  = [style.linecap.round, style.linejoin.round, style.linestyle.solid]
-    BASE += [style.linewidth.THick, BLACK]
+    BASE += [style.linestyle.dashed]
+    #BASE += [style.linewidth.Thick, BLACK]
 
     # L:
     drawing.append((path.path(path.moveto(0,0), path.lineto(2,0),
@@ -225,5 +226,7 @@ if __name__ == "__main__":
                 draw_puzzle(name+"-{:02d}".format(i+1), P[0])
                 print(r"        \DPUZZLE{"+name[:3]+"}{"+name[3:]+"}{"+
                       "{:02d}".format(i+1)+"}")
+
+        #break
 
 ################################################################################
